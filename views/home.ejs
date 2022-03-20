@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VediTrue | <%= title %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/imgstyles.css">
+    <link rel="stylesheet/less" href="/style.less">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3a5ae5bdea.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+<body class="home-main">
+  
+  <div class="signup-bg">
+    <img src="/bg-home.png" alt="">
+  </div>
+  <div class="headings1">
+    <% if(user){ %>
+      <p>welcome <%= user.fullname %>
+      </p>
+      <a href="/logout" class="home-btn">Logout</a>
+      <% } else{ %>
+        <a href="/login" class="home-btn">Login</a>
+        <a href="/signup" class="home-btn">SignUp</a>
+        <% } %>
+  </div>
+
+  <div class="headings">
+    <h2>VediTrue</h2>
+    <h3>By Designer For Designers</h3>
+  </div>
+  <div class="home-tagline">
+    <h3>Designer's <br> Learning Hub</h3>
+  </div>
+
+  
+
+  <header>
+    <div class="headings">
+      <a href="/courses" class="home-btn-exp">Explore More</a>
+    </div>
+    
+  </header>
+  
+
+
+
+
+  <%- include('partials/footer'); -%>

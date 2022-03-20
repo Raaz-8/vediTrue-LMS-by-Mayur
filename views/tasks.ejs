@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%> 
+
+<body>
+    <h2 class="heading">Manage Your Tasks</h2>
+
+    <div class="tasks">
+        <h2>All Tasks</h2>
+        <% if (tasks.length > 0) { %>
+            <ul>
+            <% tasks.forEach(task => { %>
+              <a class="single" href="/tasks/<%= task._id %>">
+
+                <li><h3> <%= task.description %> </h3></li>
+                <p> <%= task.completed %> </p>
+                </a>
+            <% }) %>   
+        </ul>
+        <% } else { %> 
+            <p>There are no Tasks to Display</p>
+        <% } %> 
+
+        
+    </div>
+
+    <a class="task-btn" href="/tasks/create">Add New Task</a>
+
+    
+</body>
+</html>

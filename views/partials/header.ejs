@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VediTrue | <%= title %></title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/imgstyles.css">
+  <link rel="stylesheet/less" href="/style.less">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/3a5ae5bdea.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  
+</head>
+<body>
+  <div class="nav-items">
+    <div class="nav">
+      <h1><a href="/">VediTrue</a></h1>
+      <p>Designer's Learning Hub</p>
+    </div>
+   
+      <% if(user){ %> 
+        <div><p class="user-name">welcome <%= user.fullname %> </p></div>
+        <div><a href="/dashboard" class="btn">Dashboard</a></div>
+        <div><a href="/coursePage" class="btn">Go To Course</a></div>
+        <div><a href="/tasks" class="btn">Manage Tasks</a></div>
+        <div><a href="/userProfile" class="btn">Edit Profile</a></div>
+        <div><a href="/logout" class="btn">Logout</a></div>
+
+      <% } else{ %>
+        <div><a href="/signup" class="btn">SignUp</a></div>
+        <div><a href="/login" class="btn">Login</a></div>
+        <% } %> 
+      
+    
+  </div>
+

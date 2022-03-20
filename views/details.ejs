@@ -1,0 +1,33 @@
+ <%- include("./partials/header.ejs") %>
+
+ <h3 class="del-head">Delete Your Task</h3>
+
+<div class="details content">
+ 
+      <h2><%= tasks.description %></h2>
+    <div class="content">
+      <p><%= tasks.completed %> Success</p> 
+    </div>
+    <a class="delete" data-doc="<%= tasks._id %>">
+      <img src="/trashcan.svg" alt="delete icon">
+    </a>
+ 
+  </div>
+
+ 
+
+  <script>
+    const trashcan = document.querySelector('a.delete');
+    trashcan.addEventListener('click', (e) => {
+      const endpoint = `/tasks/${trashcan.dataset.doc}`;
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    });
+    
+  </script>
+
+ <%- include("./partials/footer.ejs") %>

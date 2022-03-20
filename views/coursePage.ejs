@@ -1,0 +1,210 @@
+<%- include('partials/header'); -%> 
+
+<body>
+    <div class="course-page-head">
+        <h2 class="heading canva-head">Canva - Full Course For Beginners</h2>
+    </div>    
+
+    <div>
+        <div class="course-lesson">
+            <div  id="l1" class="course-l">
+                <h3 onclick="fun1()">Lesson 1</h3>
+            </div>
+            <div id="sub-txt1" class="sub-txt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/H-iEHM36q-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <button><p onclick="complete1()" >Mark As Complete</p></button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="course-lesson">
+            <div  id="l1" class="course-l">
+                <h3 onclick="fun2()">Lesson 2</h3>
+            </div>
+            <div id="sub-txt2" class="sub-txt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PGHIDVleRyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <button><p onclick="complete2()" >Mark As Complete</p></button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="course-lesson">
+            <div  id="l1" class="course-l">
+                <h3 onclick="fun3()">Lesson 3</h3>
+            </div>
+            <div id="sub-txt3" class="sub-txt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PGHIDVleRyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <button><p onclick="complete3()" >Mark As Complete</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="course-lesson">
+            <div  id="l1" class="course-l">
+                <h3 onclick="fun4()">Lesson 4</h3>
+            </div>
+            <div id="sub-txt4" class="sub-txt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0ijqINzL1qo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <button><p onclick="complete4()" >Mark As Complete</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="course-lesson">
+            <div  id="l1" class="course-l">
+                <h3 onclick="fun5()">Lesson 5</h3>
+            </div>
+            <div id="sub-txt5" class="sub-txt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/69DDai3SUDI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <button><p onclick="complete5()" >Mark As Complete</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="course-lesson">
+            <div  id="l1" class="course-l">
+                <h3 onclick="fun6()">Lesson 6</h3>
+            </div>
+            <div id="sub-txt6" class="sub-txt">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ux3sri0XJy0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <button><p onclick="complete6()" >Mark As Complete</p></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function fun1() 
+        {
+            var x = document.getElementById("sub-txt1");
+
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } else 
+            {
+                x.style.display = "none";
+            }
+        }
+        function fun2() 
+        {
+            var x = document.getElementById("sub-txt2");
+
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } else 
+            {
+                x.style.display = "none";
+            }
+        }
+        function fun3() 
+        {
+            var x = document.getElementById("sub-txt3");
+
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } else 
+            {
+                x.style.display = "none";
+            }
+        }
+        function fun4() 
+        {
+            var x = document.getElementById("sub-txt4");
+
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } else 
+            {
+                x.style.display = "none";
+            }
+        }
+        function fun5() 
+        {
+            var x = document.getElementById("sub-txt5");
+
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } else 
+            {
+                x.style.display = "none";
+            }
+        }
+        function fun6() 
+        {
+            var x = document.getElementById("sub-txt6");
+
+            if (x.style.display === "none") 
+            {
+                x.style.display = "block";
+            } else 
+            {
+                x.style.display = "none";
+            }
+        }
+        
+        function complete1() {
+            var x = document.getElementById('sub-txt1');
+
+            if(x.style.display==="block");
+            {
+                x.style.display="none";
+            }
+        }
+        function complete2() {
+            var x = document.getElementById('sub-txt2');
+
+            if(x.style.display==="block");
+            {
+                x.style.display="none";
+            }
+        }
+        function complete3() {
+            var x = document.getElementById('sub-txt3');
+
+            if(x.style.display==="block");
+            {
+                x.style.display="none";
+            }
+        }
+        function complete4() {
+            var x = document.getElementById('sub-txt4');
+
+            if(x.style.display==="block");
+            {
+                x.style.display="none";
+            }
+        }
+        function complete5() {
+            var x = document.getElementById('sub-txt5');
+
+            if(x.style.display==="block");
+            {
+                x.style.display="none";
+            }
+        }
+        function complete6() {
+            var x = document.getElementById('sub-txt6');
+
+            if(x.style.display==="block");
+            {
+                x.style.display="none";
+            }
+        }
+  
+    </script>
+    
+    <div class="course-page-footer">
+        <i class="fas fa-angle-left"></i>
+        <a href="/dashboard"><h4>Back To Dashboard</h4></a>
+    </div>
+    
+<%- include('partials/footer'); -%>

@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Comfortaa:wght@300&family=Fredoka+One&family=Great+Vibes&family=Josefin+Sans:wght@300&family=Laila&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    /* padding: 1rem; */
+    background-color: #FCF9F0;   
+    display: flex;
+    flex-direction: column;
+    color: #15616D;
+    max-width: 1250px;
+      margin: 20px auto;
+      padding: 0 20px;
+}
+
+.home-main{
+    margin: 0px auto;
+
+}
+
+a{
+    text-decoration: none;
+    color: #15616D;
+}
+
+.nav p{
+    font-family: 'Great Vibes', cursive;
+}
+
+.nav-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 3rem;
+    padding: 0.4rem 3rem;
+}
+
+.nav-items a{
+    margin: auto 2px;
+}
+
+.nav h1{
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.user-name{
+    font-size: 1.2rem;
+    /* margin-left: 2%; */
+    /* padding-left: 2%; */
+}
+
+
+
+.signup-bg img{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    max-width:100%;
+    height: auto;
+}
+
+footer{
+    text-align: center;
+    margin-top: 120px;
+    color: #aaa;
+    
+  }
+
+footer p{
+    bottom: 0;
+}
+
+/* yoshi's */
+form h2{
+    font-size: 2.4em;
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+form{
+    width: 360px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background: white;
+}
+
+.form{
+    margin:4rem 2rem 1rem 25rem;
+}
+
+input{
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+}
+
+label{
+    display: block;
+    margin: 20px 0 10px;
+}
+  
+button{
+    margin-top: 30px;
+    border-radius: 36px;
+    background: #FEE996;
+    border:0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+    display: block;
+    padding: 10px 16px;
+    letter-spacing: 2px;
+}
+
+.form a{
+    
+    text-decoration: underline;
+    font-weight: 600;
+}
+.form p{
+    margin: 0.5rem;
+}
+
+  .error{
+    color: #ff0099;
+    margin: 10px 2px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.headings, .headings1{
+      margin-top: 8%;
+      text-align: center;
+}
+
+  /* .headings{
+    font-size: 1.3rem;
+    border-bottom: 2px solid #15616D;
+
+  } */
+
+.headings1{
+      margin-right: 0;
+      margin-top: 0.3rem;
+}
+
+.headings h2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+}
+
+.headings h3{
+      margin-bottom: 2%;
+      
+}
+
+.headings h4{
+    margin-bottom: 8%;
+    color: rgb(151, 151, 151);
+    letter-spacing: 0.3rem;
+}
+
+/* header Page Buttons */
+.btn{
+      padding: 0.4rem 1.1rem;
+      font-size: 0.9rem;
+      /* margin: 0.1rem; */
+      /* border-bottom: 0.1rem solid #15616D; */
+      background-color: #15616D;
+      color: #FCF9F0;
+      border-radius: 0.6rem;
+}
+
+/* home page Buttons */
+.home-btn{
+    padding: 0.5% 1%;
+    font-size: 1.2rem;
+    border-bottom: 0.1rem solid #FCF9F0;
+    color: #FCF9F0;
+    /* margin-right: 0px; */
+    margin: 1rem 2.5rem;
+    float: right;
+}
+
+.home-btn-exp{
+    padding: 0.5% 1%;
+    font-size: 1.2rem;
+    border-bottom: 0.1rem solid #15616D;
+    color: #15616D;
+}
+
+/* header section buttons */
+.head-btn{
+    display: flex;
+    justify-content: right;
+    margin: 0.2rem 1rem;
+}
+
+
+/* courses card  */
+.card-proj{
+    padding: 20px 0px 20px 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0 1rem 4rem;
+    /* background-color: #fff; */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    box-shadow:5px #0b0c10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+}
+
+.card-content-proj ul{
+    margin-top: 20px;
+}
+
+.col-proj img{
+    width: 80%;
+}
+
+/* Courses Page Heading  */
+.heading{
+    margin: 3rem 0rem 1rem 4rem;
+}
+
+.canva-head{
+    margin-bottom: 10px;
+}
+
+.heading h3{
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    font-family: 'Great Vibes', cursive;
+    
+}
+
+.course-page-head,.course-page-footer{
+    text-align: center;
+}
+
+.course-page-head h2{
+    margin-bottom: 0;
+}
+
+.course-page-footer{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    /* content: "\f104"; */
+    /* font-family: 'FontAwesome'; */
+   
+}
+
+/* YT Videos Link  */
+
+
+
+.course-l{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: normal;
+    color: white;
+    background: #15616D;
+    margin: 0.5rem 8rem;
+    padding: 0.8em 1.2em;
+    cursor: pointer;
+    max-width: 80%;
+    transition: 0.25s;
+    border-radius: 1rem;
+}
+
+.course-l img{
+    filter: brightness(0) invert(1);
+    width: 24px;
+    
+}
+
+.course-l img:hover{
+   transform: rotate(45deg);
+   transition: (0.2s);
+}
+
+.sub-txt{
+color: white;
+background-color:rgba(21, 97, 109, 0.45);
+font-size: 26px;
+font-weight: normal;
+line-height: normal;
+padding: 1.2em;
+user-select: none;
+display: none;
+transition: max-height 0.3s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+margin: 0.5rem 8rem;
+max-width: 80%;
+
+
+}
+
+.sub-txt:hover{
+    transition: (0.2s);
+}
+
+.tasks{
+    padding: 2rem 25%;
+
+}
+
+.tasks h2{
+    border-bottom: 1px solid #15616D;
+    margin-bottom: 2%;
+}
+
+.task-btn{
+    width: 9rem;
+    background-color: #15616D;
+    border-radius: 1rem;
+    color: #FCF9F0;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin-left: 25%;
+}
+
+ 
+
+.home-tagline{
+    color:#ffa600;
+    /* float: right; */
+    /* margin-right: 10%; */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.del-head{
+    margin:10% 1% 1% 10%;
+    /* text-align: center; */
+}
+
+.details{
+    margin-left:10%;
+    position: relative;
+    width: 50%;
+    /* text-align: center; */
+    border-top: 1px solid #15616D;
+
+  }
+  .delete{
+      border-bottom: 3px solid #15616D;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  .delete:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  }
+
+  /* .details img{
+      width: 20px;
+  } */
+
+  .create-task form{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .create-task input,
+  .create-task textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+  .create-task label{
+    display: block;
+    margin-top: 24px;
+  }
+  textarea{
+    height: 120px;
+  }
+  .create-task button{
+    margin-top: 20px;
+    /* background: crimson; */
+    /* color: white; */
+    padding: 6px 9px;
+    border: 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+@media (max-width:576px) {
+    .nav{
+        font-size: 0.8rem;
+    }
+    .nav-items p{
+        font-size: 0.4rem;
+    }
+    
+}

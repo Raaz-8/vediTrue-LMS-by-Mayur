@@ -1,0 +1,60 @@
+<%- include('partials/header'); -%>
+
+
+<div class="create-task content">
+  <h2 class="heading">Manage Your Tasks</h2>
+
+    <form action="/newTask" method="POST">
+    <h3>Add New Task</h3>
+        
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required>
+      <label for="completed">Completed:</label>
+      <input type="text" id="completed" name="completed" placeholder="true/false" required>
+      <!-- <label for="body">Blog body:</label>
+      <textarea id="body" name="body" required></textarea> -->
+      <button>Add Task</button>
+    </form>
+  </div>
+
+  <!-- <script>
+
+    const form = document.querySelector('form');
+    // const emailError = document.querySelector('.email.error');
+    // const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      //get the values
+      const description = form.description.value;
+      const completed = form.completed.value;
+
+      try{
+        const res = await fetch('/newTask', {
+          method: 'POST',
+          body: JSON.stringify({description ,completed }),
+          headers:{ 'Content-Type':'application/json' }
+        });
+
+        const data = await res.json();
+        console.log(data);
+        // if(data.errors){
+        //   emailError.textContent = data.errors.email;
+        //   passwordError.textContent = data.errors.password;
+
+        // }
+        if (data){
+          location.assign('/tasks');
+        }
+
+      }
+      catch(err){
+        console.log(err);
+      }
+
+      // console.log(file, fullname, email, password);
+    })
+  </script> -->
+
+  <%- include('partials/footer'); -%>

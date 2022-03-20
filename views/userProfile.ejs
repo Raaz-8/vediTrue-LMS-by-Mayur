@@ -1,0 +1,78 @@
+<%- include('partials/header'); -%>
+
+    <h2 class="heading">Your Profile</h2>
+    <!-- <div class="container">
+        <div class="avatar-upload">
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(/profile.jpg);">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <form>
+        <label for="fullname">Enter full Name:</label>
+        <input type="text" value=<%=user.fullname %> name='fullname'>
+        <label for="email">Enter New Email:</label>
+        <input type="email" value=<%=user.email %> name='email'>
+        <div class="email error"></div>
+        <label for="password">Enter New Password:</label>
+        <input type="password" placeholder="New Password" name="password">
+        <label for="password">Confirm Password:</label>
+        <input type="password" placeholder="New Password">
+        <div class="password error"></div>
+
+
+        <button>Save Changes</button>
+    </form>
+
+    <script>
+
+        const form = document.querySelector('form');
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            //reset the values
+            emailError.textContent = ' ';
+            passwordError.textContent = ' ';
+
+            //get the values
+            const email = form.email.value;
+            const password = form.password.value;
+            //   const file = form.file.value;
+            const fullname = form.fullname.value;
+
+
+            try {
+                const res = await fetch('/userProfile', {
+                    method: 'PUT',
+                    body: JSON.stringify({ email, password, fullname }),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const data = await res.json();
+                // console.log(data);
+                if (data.errors) {
+                    emailError.textContent = data.errors.email;
+                    passwordError.textContent = data.errors.password;
+
+                }
+                if (data.user) {
+                    location.assign('/');
+                }
+
+            }
+            catch (err) {
+                console.log(err);
+            }
+
+            // console.log(file, fullname, email, password);
+        })
+    </script>
+
+
+
+    <%- include('partials/footer'); -%>
