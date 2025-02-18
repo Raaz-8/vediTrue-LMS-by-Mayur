@@ -13,15 +13,16 @@ const PORT = process.env.PORT || 4000;
 
 // Setup static file serving
 const publicStaticDirPath = path.join(__dirname, './public')
-
+// View engine
+const viewsPath = path.join(__dirname, './views');
+app.set('views', viewsPath);
+app.set('view engine', 'ejs');
 // Middleware
 app.use(express.static(publicStaticDirPath));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-// View engine
-app.set('view engine', 'ejs');
 
 // Database connection
 // const dbURI = process.env.MONGO_URI;
