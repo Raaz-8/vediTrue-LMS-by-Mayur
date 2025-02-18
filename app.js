@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
@@ -8,7 +9,7 @@ const path = require("path");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Setup static file serving
 const publicStaticDirPath = path.join(__dirname, './public')
@@ -23,10 +24,13 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 // Database connection
-const dbURI = process.env.MONGO_URI;
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+// const dbURI = process.env.MONGO_URI;
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
   .then((result) => {
     console.log('Database connected');
+    app.listen(PORT, () => {
+      console.log(`Server is running on port: ${PORT}`);
+    });
   })
   .catch((err) => {
     console.log(err);
