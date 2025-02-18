@@ -94,6 +94,9 @@ app.delete('/tasks/:id', (req, res) => {
 
 // Use Auth Routes
 app.use(authRoutes);
-
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
 // Export for Vercel deployment
 module.exports = app;
