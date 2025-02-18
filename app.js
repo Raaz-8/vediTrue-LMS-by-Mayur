@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 // Database connection
-const dbURI = 'mongodb+srv://ved-admin:veditrue@mt-clust.3vc5i.mongodb.net/mt-clust?retryWrites=true&w=majority';
+const dbURI = process.env.MONGO_URI;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
   .then((result) => {
     console.log('Database connected');
